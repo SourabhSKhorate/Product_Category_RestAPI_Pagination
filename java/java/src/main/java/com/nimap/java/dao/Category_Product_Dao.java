@@ -42,10 +42,6 @@ public class Category_Product_Dao {
 
 	// find all
 	public List<Category> getAllCategory(Integer pageNumber, Integer pageSize) {
-//		Integer pageNumber, Integer pageSize
-//		int pageSize=5;
-//		int pageNumber=1;
-		
 		Pageable p=PageRequest.of(pageNumber, pageSize);
 		Page<Category> pageCategory= this.categoryRepository.findAll(p);
 		List<Category> allCategory= pageCategory.getContent();
@@ -82,11 +78,7 @@ public class Category_Product_Dao {
 	}
 
 	// get all product	
-	public List<Product> getAllProduct(Integer pageNumber, Integer pageSize) {
-//		Integer pageNumber, Integer pageSize
-//		int pageSize=5;
-//		int pageNumber=1;
-		
+	public List<Product> getAllProduct(Integer pageNumber, Integer pageSize) {		
 		Pageable p=PageRequest.of(pageNumber, pageSize);
 		Page<Product> pageProduct= this.productRepository.findAll(p);
 		List<Product> allProduct= pageProduct.getContent();
